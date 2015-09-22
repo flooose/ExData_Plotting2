@@ -1,5 +1,7 @@
 unzip("exdata-data-NEI_data.zip")
 
+par(bg='white')
+
 scc <- readRDS('Source_Classification_Code.rds')
 nei <- readRDS('summarySCC_PM25.rds')
 
