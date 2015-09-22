@@ -2,4 +2,5 @@
 - add assignment questions to first line of each source file
 - comment what you are doing
 - add smoothers for orientation
+- justify your grep decisions
 - clean up variable names
