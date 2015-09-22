@@ -19,7 +19,7 @@ aggregateLAAndBal <- aggregate(neiLAAndBal$Emissions, by = list(year=neiLAAndBal
 colnames(aggregateLAAndBal) <- c('year', 'fips', 'Emissions')
 
 # Single Plot
-g <- ggplot(aggregateLAAndBal, aes(year, Emissions))
+g <- ggplot(aggregateLAAndBal, aes(year, Emissions, color=fips))
 g+geom_point()
 
 # Panel plot not necessary because all entries are of type 'ON-ROAD'
