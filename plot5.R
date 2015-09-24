@@ -1,5 +1,8 @@
 # 5. How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
 
+library(dplyr)
+library(ggplot2)
+
 unzip("exdata-data-NEI_data.zip")
 
 par(bg='white')
@@ -21,8 +24,6 @@ colnames(aggregateVehiclesBaltimore) <- c('year', 'type', 'Emissions')
 # Single Plot
 g <- ggplot(aggregateVehiclesBaltimore, aes(year, Emissions))
 g+geom_point()
-
-# Panel plot not necessary because all entries are of type 'ON-ROAD'
 
 dev.copy(png, file= 'plot5.png')
 dev.off()
